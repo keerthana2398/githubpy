@@ -1,0 +1,139 @@
+i=10
+while i<=200:
+    print(i,end=':')
+    i+=10
+output:10:20:30:40:50:60:70:80:90:100:110:120:130:140:150:160:170:180:190:200:
+
+ex.2-'''positive integer'''
+    i=0 #assume the variables
+while i<10:#condition applied
+    print(i,end=',')#print statemnet 
+    i+=1#updation
+output:0,1,2,3,4,5,6,7,8,9,
+
+ex.3-'''reverse order using if'''
+    i=10
+while i<11:
+    if i==0:
+        break
+    print(i,end=',')
+    i=i-1
+output:10,9,8,7,6,5,4,3,2,1,
+
+ex.4-'''reverse order'''
+    i=10
+while i>0:
+    print(i,end=',')
+    i-=1
+   output: 10,9,8,7,6,5,4,3,2,1,
+    
+ex.5-'''factorial number'''
+i = int(input('Enter a positive integer number:\n'))
+fact = 1
+while i > 0:
+    fact = fact * i
+    i -= 1
+print('Factorial of the given number:\n', fact)
+output:
+Enter a positive integer number:
+5
+Factorial of the given number:
+ 120
+ 
+ex.6-'''reverse a given interger using while loop'''
+num = int(input('Enter an integer: '))
+#assuming variables
+reversed_num = 0
+#loop
+while num > 0:#condition
+    digit = num % 10
+    reversed_num = reversed_num * 10 + digit
+    num = num // 10#updation
+print('Reversed integer:', reversed_num)
+output:Enter an integer: 123
+Reversed integer: 321
+
+ex.7-"""adding all even numbers"""""
+
+n_number = int(input('Enter the number:\n'))
+
+num = 1
+sum_ = 0
+
+while num <= n_number:
+    if num % 2 == 0:
+        sum_ = sum_ + num
+    num = num + 1  # Increment num inside the loop
+
+print('Sum of all even numbers from 1 to a given positive integer:\n', sum_)
+output:Enter the number:
+5
+Sum of all even numbers from 1 to a given positive integer:
+ 6
+ 
+ex.8-'''finding sum of given digit'''
+num = int(input('Enter a positive integer: '))
+
+# Initialize sum of digits
+sum_of_digits = 0
+
+# Loop to extract and sum each digit
+while num > 0:
+    digit = num % 10  # Extract the last digit
+    sum_of_digits += digit  # Add the digit to the sum
+    num //= 10  # Remove the last digit
+
+print('Sum of digits in the given positive integer:', sum_of_digits)
+output:Enter a positive integer: 52
+Sum of digits in the given positive integer: 7
+
+ex.9-'''palindrome of a given number'''
+num = int(input('Enter a number:\n'))
+original_num = num
+
+# Initialize variables
+reversed_num = 0
+
+while num > 0:
+    # Extract the last digit of the number
+    digit = num % 10
+
+    # Update the reversed number by adding the digit
+    reversed_num = reversed_num * 10 + digit
+
+    # Remove the last digit from the original number
+    num = num // 10
+if original_num == reversed_num:
+    print('The given number is a palindrome.')
+else:
+    print('The given number is not a palindrome.')    
+output:Enter a number:
+1551
+The given number is a palindrome.
+ex.10'''finding the largest number of given positive integer'''
+num=int(input('Enter a positive integer:\n'))
+ori=num
+largest_digit=0
+while num > 0:
+    digit=num%10
+    if digit>largest_digit:
+        largest_digit=digit
+    num//=10
+print('The largest digit of a given positive interger {} is {}'.format(ori,largest_digit))    
+output:Enter a positive integer:
+56
+The largest digit of a given positive interger 56 is 6
+ex.11-'''to find the count of the given positive integer'''
+num = int(input('Enter a positive integer:\n'))
+original_num = num  # Save the original value for printing
+
+count_of_digits = 0
+
+while num > 0:
+    count_of_digits += 1
+    num //= 10
+
+print('The count of digits in the given positive integer {} is {}'.format(original_num, count_of_digits))
+output:Enter a positive integer:
+563
+The count of digits in the given positive integer 563 is 3
