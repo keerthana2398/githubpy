@@ -1,9 +1,0 @@
-i=int(input('enter a positive integer number:'))
-while i>=8:
-    if i==16:
-        break
-    print(i)
-    i+=1
-    
-else:
-    print('given number is invalid.')
